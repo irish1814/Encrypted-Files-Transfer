@@ -16,7 +16,22 @@ Install my project with
   cd Encrypted-Files-Transfer
 ```
     
+## Dependencies
+
+This project use rsa & pycryptodome module for the encryption part.
+
+```bash
+pip / pip3 install -r requirements.txt
+```
 ## Deployment
+
+The server and client use a 16 bit salt for the AES algorithm, you can find it in the protocol script and replace it with a new random salt of your own using python:
+
+```bash
+python / python3
+from Crypto.Random import get_random_bytes
+print(get_random_bytes(16))
+```
 
 ### Deploy Server
 server.py & protocol.py needs to be in the same directory!
@@ -34,13 +49,6 @@ In the client computer run:
 python / python3 client.py
 ``` 
 then enter the IP of the server.
-## Dependencies
-
-rsa, pycryptodome.
-
-```bash
-pip / pip3 install -r requirements.txt
-```
 ## Technology that have been used in this project
 
  - [RSA](https://www.geeksforgeeks.org/rsa-algorithm-cryptography/)
