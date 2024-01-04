@@ -76,7 +76,8 @@ def main():
     # clients_messages is a list of sockets that needs to send messages back to the client. for more info about
     # clients_sockets list read the comment about select method.
     clients_sockets, clients_messages = [], []
-    print('server is up and running')
+    print(f'server is up and running at the IP address: {socket.gethostbyname(socket.gethostname())}, '
+          f'Port: {protocol.PORT}')
 
     while True:
         """
