@@ -1,18 +1,19 @@
 import rsa
 import logging
-from socket import socket, gethostname, gethostbyname
+from socket import socket
+from typing import final
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 
 # Connection Fields
-ADDRESS = "0.0.0.0"
-PORT = 9999
+ADDRESS: final = "0.0.0.0"
+PORT: final = 9999
 
-LENGTH_FIELD_SIZE = 3
+LENGTH_FIELD_SIZE: final = 3
 
 # Encryption Fields
-SALT = open('salt.key', 'rb').read()
-PUBLIC_KEY_SIZE = 2048
+SALT: final = b'u&\xb3[\xdf\x15\xe6\xd1\x83\xf5\x8cp?OAB'
+PUBLIC_KEY_SIZE: final = 2048
 
 # Available commands in the server
 COMMANDS = ('HELP', 'Help', 'help', 'LS', 'Ls', 'ls', 'PUT', 'Put', 'put', 'GET', 'Get', 'get', 'QUIT', 'Quit', 'quit')
