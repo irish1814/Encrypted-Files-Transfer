@@ -21,14 +21,14 @@ Install my project with
 This project use rsa & pycryptodome module for the encryption part.
 
 ```bash
-pip / pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 ## Deployment
 
 The server and client use a 16 bit salt for the AES algorithm, you can find it in the protocol script and replace it with a new random salt of your own using python:
 
 ```bash
-python / python3
+python3
 from Crypto.Random import get_random_bytes
 print(get_random_bytes(16))
 ```
@@ -37,7 +37,7 @@ print(get_random_bytes(16))
 server.py & protocol.py needs to be in the same directory!
 In the server computer run:
 ```bash
-python / python3 server.py
+python3 server.py
 ```
 after running the script, the IP address of the server will be printed on the console.
 copy it and enter it when you'll deploy the client.py script
@@ -46,7 +46,7 @@ copy it and enter it when you'll deploy the client.py script
 client.py & protocol.py needs to be in the same directory!
 In the client computer run: 
 ```bash
-python / python3 client.py
+python3 client.py
 ``` 
 then enter the IP of the server.
 ## Technology that have been used in this project
